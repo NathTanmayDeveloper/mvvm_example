@@ -9,10 +9,13 @@ import Foundation
 
 class ProductScreenViewModel {
     var products: [ProductModel] = []
-    var apiHelper: ApiHelperProtocol?
+    let apiHelper: ApiHelperProtocol
+    
+    init(apiHelper: ApiHelperProtocol) {
+        self.apiHelper = apiHelper
+    }
     
     func getProducts() {
-        guard let apiHelper = apiHelper else { return }
         apiHelper.fetchProduct { response in
             switch response {
             case .success(let products): self.products = products

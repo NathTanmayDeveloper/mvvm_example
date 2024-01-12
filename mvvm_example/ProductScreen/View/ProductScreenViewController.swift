@@ -8,8 +8,11 @@
 import UIKit
 
 class ProductScreenViewController: UIViewController {
+    
+    var viewModel: ProductScreenViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = ProductScreenViewModel(apiHelper: ServiceManager())
     }
 }
