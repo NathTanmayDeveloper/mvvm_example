@@ -32,7 +32,17 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
                                     <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mx-E0-fj6"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MqN-bm-tYb" userLabel="activityIndicatorView">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1PE-7R-aG5"/>
+                                    <constraint firstAttribute="width" constant="100" id="gx4-T8-SSb"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,11 +50,18 @@
                             <constraint firstItem="OQ4-UI-BCT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DJF-Bh-Jms"/>
                             <constraint firstItem="OQ4-UI-BCT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HMD-j0-apA"/>
                             <constraint firstItem="OQ4-UI-BCT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IUX-wq-kWP"/>
+                            <constraint firstItem="MqN-bm-tYb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rvc-UZ-ggi"/>
                             <constraint firstItem="OQ4-UI-BCT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SIz-RS-S9z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0FE-Om-ixQ" secondAttribute="bottom" constant="32" id="TgC-wc-BCh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0FE-Om-ixQ" secondAttribute="trailing" constant="32" id="kHO-sT-W8a"/>
+                            <constraint firstItem="MqN-bm-tYb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uw4-KY-Tij"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="MqN-bm-tYb" id="GeB-ZS-k0X"/>
+                        <outlet property="refreshButton" destination="0FE-Om-ixQ" id="7bC-Ef-KXR"/>
+                        <outlet property="tableView" destination="OQ4-UI-BCT" id="Tyr-Nv-jNf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

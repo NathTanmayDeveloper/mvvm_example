@@ -36,7 +36,7 @@ class ServiceManager: ApiHelperProtocol {
                 completion(.failure(.invalidResponse))
                 return
             }
-            guard error != nil else {
+            guard error == nil else {
                 completion(.failure(.error(error!)))
                 return
             }
@@ -46,7 +46,7 @@ class ServiceManager: ApiHelperProtocol {
             } catch(let error) {
                 completion(.failure(.error(error)))
             }
-        }
+        }.resume()
     }
     
 }
